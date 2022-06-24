@@ -78,7 +78,15 @@ export default function About() {
         top: "15px",
 
         [theme.breakpoints.up("sm")]: {
-          top: "1.65vw;",
+          top: "1.85vw;",
+        },
+
+        [theme.breakpoints.up("lg")]: {
+          top: "1.45vw;",
+        },
+
+        [theme.breakpoints.up("xl")]: {
+          top: "1.15vw;",
         },
       },
     },

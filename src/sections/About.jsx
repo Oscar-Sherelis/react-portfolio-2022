@@ -1,3 +1,5 @@
+// Styles and Styled Elements
+
 import { Box, styled } from "@mui/system";
 import { ListItem, List } from "@mui/material";
 import { StyledSection } from "../components/Section";
@@ -37,7 +39,7 @@ export default function About() {
     },
 
     [theme.breakpoints.down("sm")]: {
-      marginLeft: "15px"
+      marginLeft: "15px",
     },
   });
 
@@ -47,7 +49,7 @@ export default function About() {
     display: "flex",
 
     [theme.breakpoints.down("sm")]: {
-      flexDirection: "column"
+      flexDirection: "column",
     },
   });
 

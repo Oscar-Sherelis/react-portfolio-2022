@@ -1,8 +1,13 @@
+// Styles and Styled Elements
+
 import { StyledSection } from "../components/Section";
 import { theme } from "../Theme";
 import { DefaultH1 } from "../components/text-elements/CustomTextEl";
 import { Box, styled } from "@mui/system";
 import { IconButton } from "@mui/material";
+
+// Social Media Icons
+
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";

@@ -1,8 +1,16 @@
+// Styles and Styled Elements
+
 import { Box, styled } from "@mui/system";
 import { theme } from "../Theme";
-import { Home, AccountCircle, Work, Chat } from "@mui/icons-material";
 import { List, ListItem, ListItemIcon, Link } from "@mui/material";
+
+// @function Converts hexa Value to RGBA
+
 import { HexToRGBA } from "../functions/HexToRGBA";
+
+// Icons
+
+import { Home, AccountCircle, Work, Chat } from "@mui/icons-material";
 
 export default function Sidebar({ linkColor, linkBorderOpacity }) {
   const SideBar = styled(Box)({

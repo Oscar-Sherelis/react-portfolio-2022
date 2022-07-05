@@ -1,16 +1,25 @@
+import React from "react";
+
+// Styles and Styled Elements
+
 import { StyledSection } from "../components/Section";
 import { styled, Box } from "@mui/system";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { IconButton, Link } from "@mui/material";
 import { theme } from "../Theme";
-import React from "react";
+
+// Text Elements
+
 import {
   DefaultH1,
   DefaultParagraph,
 } from "../components/text-elements/CustomTextEl";
-import memeGenerator from "../images/meme.png"
+
+// Images
+
+import memeGenerator from "../images/meme.png";
 import gallery from "../images/gallery.png";
-import weatherApp from "../images/weatherapp.png"
+import weatherApp from "../images/weatherapp.png";
 import phonenumberShare from "../images/phonenumbershare.png";
 import pcShop from "../images/pc-shop.png";
 import fileViewer from "../images/fileviewer.png";
@@ -56,7 +65,7 @@ export default function Projects() {
   ];
 
   const ProjectsSection = styled(StyledSection)({
-    height: "unset"
+    height: "unset",
   });
 
   const ProjectsContainer = styled(Box)({
@@ -82,15 +91,15 @@ export default function Projects() {
 
   const LinktToRepo = styled(IconButton)({
     color: theme.palette.secondary.textMainColor,
-    marginRight: "15px"
+    marginRight: "15px",
   });
 
   const ProjectDemo = styled(Link)({
     fontSize: "16px",
     color: theme.palette.secondary.textMainColor,
     "&:hover": {
-      cursor: "pointer"
-    }
+      cursor: "pointer",
+    },
   });
 
   function ProjectImage({ imageURL }) {

@@ -15,6 +15,7 @@ Decided to make a new portfolio. Decided to try MUI 5 and Vite.
 
 * css
     * App.css - global styling.
+    * ubdex.css - Do not changed anything after creating the project.
 
 * functions
     * HexToRGBA.jsx - converts hex to RGBA. Needed to add a hover effect on navigation.

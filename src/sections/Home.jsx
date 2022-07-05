@@ -1,3 +1,5 @@
+// Styles and Styled Elements
+
 import { styled, Box } from "@mui/system";
 import { theme } from "../Theme";
 import React from "react";
@@ -7,6 +9,9 @@ import {
   LightBlueH1,
 } from "../components/text-elements/CustomTextEl";
 import { StyledSection } from "../components/Section";
+
+// Typewriting Effect
+
 import useTypewriterEffect, {
   getTypewriter,
   useCursor,

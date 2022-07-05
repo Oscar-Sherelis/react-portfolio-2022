@@ -4,7 +4,7 @@ import { Home, AccountCircle, Work, Chat } from "@mui/icons-material";
 import { List, ListItem, ListItemIcon, Link } from "@mui/material";
 import { HexToRGBA } from "../functions/HexToRGBA";
 
-export default function CustomSidebar({ linkColor, linkBorderOpacity }) {
+export default function Sidebar({ linkColor, linkBorderOpacity }) {
   const SideBar = styled(Box)({
     backgroundColor: theme.palette.primary.main,
     height: "100vh",

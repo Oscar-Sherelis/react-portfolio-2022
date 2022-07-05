@@ -27,7 +27,6 @@ const DefaultParagraph = styled(Typography)({
   },
 
   [theme.breakpoints.down("sm")]: {
-    inlineSize: "150px",
     overflowWrap: "break-word",
   },
 });

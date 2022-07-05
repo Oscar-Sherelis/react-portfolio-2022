@@ -13,6 +13,11 @@ export const theme = createTheme({
       main: "#282d5d",
       textMainColor: "#42eaf3",
     },
+
+    socialMedia: {
+      linkedIn: "#0A66C2",
+      twitter: "#1D9BF0",
+    },
   },
 
   globalFontFamily: {

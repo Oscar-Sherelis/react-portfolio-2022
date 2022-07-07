@@ -193,15 +193,19 @@ export default function About() {
         <EducationExperienceContainer>
           <Box className="education">
             <LightBlueH3>Education</LightBlueH3>
-            {educationData.map((education, i) => (
-              <EducationDescription key={i}>
+            {educationData.map((education, educationIndex) => (
+              <EducationDescription key={educationIndex}>
                 <DefaultParagraph>{education.year}</DefaultParagraph>
                 <DefaultParagraph>{education.description}</DefaultParagraph>
                 {education.technologiesAndTools.length > 0 && (
                   <DefaultList>
-                    {education.technologiesAndTools?.map((technology, i) => (
-                      <DefaultListItem key={i}>{technology}</DefaultListItem>
-                    ))}
+                    {education.technologiesAndTools?.map(
+                      (technology, technologyIndex) => (
+                        <DefaultListItem key={technologyIndex}>
+                          {technology}
+                        </DefaultListItem>
+                      )
+                    )}
                   </DefaultList>
                 )}
               </EducationDescription>

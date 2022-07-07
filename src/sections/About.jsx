@@ -9,6 +9,7 @@ import {
   DefaultParagraph,
   LightBlueH3,
 } from "../components/text-elements/CustomTextEl";
+import { Description } from "@material-ui/icons";
 
 export default function About() {
   const AboutSection = styled(StyledSection)({
@@ -112,6 +113,65 @@ export default function About() {
 
   const ExperienceDescription = EducationDescription;
 
+  const educationData = [
+    {
+      year: "2015-2018",
+      description:
+        "The branch of the University of Bialystok in Vilnius Faculty of Informatics",
+      technologiesAndTools: [],
+    },
+    {
+      year: "2019",
+      description: "Codecademy 6 month Full-stack course.",
+      technologiesAndTools: [
+        "PHP",
+        "Styling: CSS3 Grid, Flex, Bootstrap",
+        "Firebase",
+        "MySQL",
+        "MVC",
+      ],
+    },
+  ];
+
+  const experienceData = [
+    {
+      year: "2019",
+      description: "Exadel internship",
+      technologiesAndTools: [
+        "Postman",
+        "Promises",
+        "HTTP requests",
+        "Routes",
+        "CSS",
+        "Vue",
+        "Vuex",
+        "Node js",
+        "MongoDB",
+        "Mongoose",
+      ],
+    },
+
+    {
+      year: "2020-2021",
+      description: "Webstrum Full-stack developer",
+      technologiesAndTools: ["Prestashop", "Wordpress", "JS", "PHP", "Mysql"],
+    },
+    {
+      year: "2021-2022",
+      description: "Zillion consulting Full-stack",
+      technologiesAndTools: [
+        "Maintenance",
+        "Wordpress",
+        "JS",
+        "LESS",
+        "PHP",
+        "Mysql",
+        "ACF",
+        "CF7",
+        "Widgets",
+      ],
+    },
+  ];
   return (
     <AboutSection id="about">
       <Box>
@@ -133,74 +193,40 @@ export default function About() {
         <EducationExperienceContainer>
           <Box className="education">
             <LightBlueH3>Education</LightBlueH3>
-            <EducationDescription>
-              <DefaultParagraph>2015-2018</DefaultParagraph>
-              <DefaultParagraph>
-                The branch of the University of Bialystok in Vilnius „Faculty of
-                Informatics”
-              </DefaultParagraph>
-            </EducationDescription>
-            <EducationDescription>
-              <DefaultParagraph>2019</DefaultParagraph>
-              <DefaultParagraph>
-                Codecademy 6 month Full-stack course.
-              </DefaultParagraph>
-              <DefaultList>
-                <DefaultListItem>PHP</DefaultListItem>
-                <DefaultListItem>
-                  Styling: CSS3 Grid, Flex, Bootstrap
-                </DefaultListItem>
-                <DefaultListItem>Firebase</DefaultListItem>
-                <DefaultListItem>MySQL</DefaultListItem>
-                <DefaultListItem>MVC</DefaultListItem>
-              </DefaultList>
-            </EducationDescription>
+            {educationData.map((education, i) => (
+              <EducationDescription key={i}>
+                <DefaultParagraph>{education.year}</DefaultParagraph>
+                <DefaultParagraph>{education.description}</DefaultParagraph>
+                {education.technologiesAndTools.length > 0 && (
+                  <DefaultList>
+                    {education.technologiesAndTools?.map((technology, i) => (
+                      <DefaultListItem key={i}>{technology}</DefaultListItem>
+                    ))}
+                  </DefaultList>
+                )}
+              </EducationDescription>
+            ))}
           </Box>
           <Box className="experience">
             <LightBlueH3>Experience</LightBlueH3>
-            <ExperienceDescription>
-              <DefaultParagraph>2019</DefaultParagraph>
-              <DefaultParagraph>Exadel internship</DefaultParagraph>
-              <DefaultList>
-                <DefaultListItem>Postman</DefaultListItem>
-                <DefaultListItem>Promises</DefaultListItem>
-                <DefaultListItem>HTTP requests</DefaultListItem>
-                <DefaultListItem>Routes</DefaultListItem>
-                <DefaultListItem>CSS</DefaultListItem>
-                <DefaultListItem>Vue</DefaultListItem>
-                <DefaultListItem>Vuex</DefaultListItem>
-                <DefaultListItem>Node js</DefaultListItem>
-                <DefaultListItem>MongoDB</DefaultListItem>
-                <DefaultListItem>Mongoose</DefaultListItem>
-              </DefaultList>
-            </ExperienceDescription>
-            <ExperienceDescription>
-              <DefaultParagraph>2020-2021</DefaultParagraph>
-              <DefaultParagraph>Webstrum Full-stack</DefaultParagraph>
-              <DefaultList>
-                <DefaultListItem>Prestashop</DefaultListItem>
-                <DefaultListItem>Wordpress</DefaultListItem>
-                <DefaultListItem>JS</DefaultListItem>
-                <DefaultListItem>PHP</DefaultListItem>
-                <DefaultListItem>Mysql</DefaultListItem>
-              </DefaultList>
-            </ExperienceDescription>
 
-            <ExperienceDescription>
-              <DefaultParagraph>2021-2022</DefaultParagraph>
-              <DefaultParagraph>Zillion consulting Full-stack</DefaultParagraph>
-              <DefaultList>
-                <DefaultListItem>Maintenance</DefaultListItem>
-                <DefaultListItem>Wordpress</DefaultListItem>
-                <DefaultListItem>JS</DefaultListItem>
-                <DefaultListItem>LESS</DefaultListItem>
-                <DefaultListItem>PHP</DefaultListItem>
-                <DefaultListItem>Mysql</DefaultListItem>
-                <DefaultListItem>ACF</DefaultListItem>
-                <DefaultListItem>CF7</DefaultListItem>
-                <DefaultListItem>Widgets</DefaultListItem>
-              </DefaultList>
-            </ExperienceDescription>
+            {experienceData.map((experience, experienceIndex) => (
+              <ExperienceDescription key={experienceIndex}>
+                <DefaultParagraph>{experience.year}</DefaultParagraph>
+                <DefaultParagraph>{experience.description}</DefaultParagraph>
+                {experience.technologiesAndTools.length > 0 && (
+                  <DefaultList>
+                    {experience.technologiesAndTools?.map(
+                      (technology, technologyIndex) => (
+                        <DefaultListItem key={technologyIndex}>
+                          {technology}
+                        </DefaultListItem>
+                      )
+                    )}
+                  </DefaultList>
+                )}
+              </ExperienceDescription>
+            ))}
           </Box>
         </EducationExperienceContainer>
       </Box>

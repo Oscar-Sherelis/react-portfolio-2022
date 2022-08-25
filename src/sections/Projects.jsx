@@ -99,7 +99,10 @@ export default function Projects() {
   const LinktToRepo = styled(IconButton)({
     color: theme.palette.secondary.textMainColor,
     marginRight: "15px",
-    padding: "8px 0"
+    padding: "8px 0",
+    "&:hover": {
+      color: theme.palette.primary.main,
+    }
   });
 
   const ProjectDemo = styled(Link)({
@@ -108,6 +111,7 @@ export default function Projects() {
     color: theme.palette.secondary.textMainColor,
     "&:hover": {
       cursor: "pointer",
+      textDecoration: "underline",
     },
   });
 

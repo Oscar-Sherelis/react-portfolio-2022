@@ -23,14 +23,14 @@ export default function About() {
   const DefaultListItem = styled(ListItem)({
     fontSize: theme.fontSizes.p,
     padding: "5px 0 0 0",
-    marginLeft: "1.8vw",
+    marginLeft: "18px",
     color: theme.palette.secondary.textMainColor,
     position: "relative",
     "&:before": {
       position: "absolute",
       content: '"•"',
       color: theme.palette.primary.textMainColor,
-      left: "-1.8vw",
+      left: "-18px",
       [theme.breakpoints.down("sm")]: {
         left: "-15px",
       },
@@ -71,14 +71,14 @@ export default function About() {
       background: theme.palette.secondary.textMainColor,
 
       [theme.breakpoints.up("sm")]: {
-        top: "0.65vw;",
+        top: "7px",
       },
     },
 
     "&:not(:first-of-type)": {
       padding: "10px 20px 0 20px",
       "&:after": {
-        top: "15px",
+        top: "17px",
 
         [theme.breakpoints.up("sm")]: {
           top: "1.85vw;",

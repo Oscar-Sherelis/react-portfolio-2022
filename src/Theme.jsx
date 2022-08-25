@@ -25,9 +25,9 @@ export const theme = createTheme({
   },
 
   fontSizes: {
-    h1: "2.8vw",
-    h3: "2.2vw",
-    p: "1.8vw",
+    h1: "36px",
+    h3: "28px",
+    p: "21px",
   },
 
   sectionSpacing: "20px",

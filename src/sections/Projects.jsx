@@ -31,30 +31,36 @@ export default function Projects() {
       technologies: "React",
       image: weatherApp,
       gitHubLink: "https://github.com/Oscar-Sherelis/react-ts-weather-app",
+      demo: "https://oscar-weather-app.netlify.app"
     },
     {
       name: "Phonenumber share",
       technologies: "Laravel",
       image: phonenumberShare,
       gitHubLink: "https://github.com/Oscar-Sherelis/phonenumber_share",
+      demo: "https://phonenumber-share.herokuapp.com"
     },
     {
       name: "PC shop",
       technologies: "Vue, Vuex",
       image: pcShop,
       gitHubLink: "https://github.com/Oscar-Sherelis/vuejs-desktops",
+      demo: "https://oscar-sherelis-pc-shop.netlify.app"
     },
     {
       name: "Meme generator",
       technologies: "JS",
       image: memeGenerator,
       gitHubLink: "https://github.com/Oscar-Sherelis/meme_generator",
+      demo: "https://meme-generator-oscar.netlify.app"
+
     },
     {
       name: "Gallery",
       technologies: "JS",
       image: gallery,
       gitHubLink: "https://github.com/Oscar-Sherelis/gallery",
+      demo: "https://oscar-sherelis-gallery.netlify.app"
     },
     {
       name: "File viewer",
@@ -66,6 +72,7 @@ export default function Projects() {
 
   const ProjectsSection = styled(StyledSection)({
     height: "unset",
+    display: "block",
   });
 
   const ProjectsContainer = styled(Box)({
@@ -92,10 +99,12 @@ export default function Projects() {
   const LinktToRepo = styled(IconButton)({
     color: theme.palette.secondary.textMainColor,
     marginRight: "15px",
+    padding: "8px 0"
   });
 
   const ProjectDemo = styled(Link)({
     fontSize: "16px",
+    textDecoration: "none",
     color: theme.palette.secondary.textMainColor,
     "&:hover": {
       cursor: "pointer",
@@ -124,15 +133,15 @@ export default function Projects() {
           Projects
         </DefaultH1>
         <ProjectsContainer>
-          {projects.map((project) => (
-            <Project key={project.name}>
-              <ProjectImage imageURL={project.image}></ProjectImage>
-              <ProjectName>{project.name}</ProjectName>
-              <DefaultParagraph>{project.technologies}</DefaultParagraph>
-              <LinktToRepo href={project.gitHubLink}>
+          {projects.map(({ name, image, technologies, gitHubLink, demo }, i) => (
+            <Project key={i}>
+              <ProjectImage imageURL={image}></ProjectImage>
+              <ProjectName>{name}</ProjectName>
+              <DefaultParagraph>{technologies}</DefaultParagraph>
+              <LinktToRepo href={gitHubLink}>
                 <GitHubIcon></GitHubIcon>
               </LinktToRepo>
-              <ProjectDemo>Demo</ProjectDemo>
+              {demo && <ProjectDemo href={demo} >Demo</ProjectDemo>}
             </Project>
           ))}
         </ProjectsContainer>

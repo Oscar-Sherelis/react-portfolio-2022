@@ -15,6 +15,7 @@ export default function SectionContainer() {
       minHeight: "100vh",
       maxHeight: "100vh",
       overflowY: "scroll",
+      overflowX: "hidden",
       [theme.breakpoints.down("sm")]: {
         width: "60%",
       },

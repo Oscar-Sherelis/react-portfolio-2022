@@ -63,7 +63,7 @@ export default function Home() {
 
         <DefaultParagraph>
           I'm a web developer with experience of over 1.5 years. My expertise is
-          in creating responsive websites according to customer needs. I am
+          in creating responsive multi-functional websites according to customer needs. I am
           seeking challenges and knowledge.
         </DefaultParagraph>
       </Box>
